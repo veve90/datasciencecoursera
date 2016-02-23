@@ -1,3 +1,11 @@
 #R-programming
 
 Here I will save code that I used for the R-programming cours : https://www.coursera.org/learn/r-programming/home/welcome
+
+
+## About this Course
+
+In this course you will learn how to program in R and how to use R for effective data analysis. You will learn how to install and configure software necessary for a statistical programming environment and describe generic programming language concepts as they are implemented in a high-level statistical language. The course covers practical issues in statistical computing which includes programming in R, reading data into R, accessing R packages, writing R functions, debugging, profiling R code, and organizing and commenting R code. Topics in statistical data analysis will provide working examples.
+
+
+source of information: https://www.coursera.org/learn/r-programming/
