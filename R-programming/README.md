@@ -1,7 +1,7 @@
 #R-programming
+https://www.coursera.org/learn/r-programming/home/welcome
 
-Here I will save code that I used for the R-programming cours : https://www.coursera.org/learn/r-programming/home/welcome
-
+This is the second course in the specialization. 
 
 ## About this Course
 
