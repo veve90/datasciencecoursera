@@ -16,3 +16,7 @@ str(my_var)
 my_pois <- replicate(100, rpois(5, 10))
 cm <- colMeans(my_pois)
 hist(cm)
+
+# graphics
+plot(matrix_name)
+hist(matrix_name)
