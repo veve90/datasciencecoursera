@@ -1,10 +1,21 @@
-# outcome <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
-# outcome[, 11] <- as.numeric(outcome[, 11])
-# hist(outcome[, 11])
 
 # Argument state:  a state name, ex: TX
 # Argument outcome: a death outcome like "heart attack"
 # Example of run: best("TX", "heart attack")
+#
+#
+#> best("TX", "heart attack")
+#[1] "CYPRESS FAIRBANKS MEDICAL CENTER"
+#> best("TX", "heart failure")
+#[1] "FORT DUNCAN MEDICAL CENTER"
+#> best("MD", "heart attack")
+#[1] "JOHNS HOPKINS HOSPITAL, THE"
+#> best("MD", "pneumonia")
+#[1] "GREATER BALTIMORE MEDICAL CENTER"
+#> best("BB", "heart attack")
+#Error in best("BB", "heart attack") : invalid state
+#> best("NY", "hert attack")
+#Error
 best <- function(state, outcome) {
   ## Read outcome data
   data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
@@ -48,6 +59,18 @@ best <- function(state, outcome) {
   dataWithMinimumRate$Hospital
 }
 
+
+# Argument state: state in wich we are going to search for death cause
+# Argument outcome : death cause
+# Argument num: rank of hospital in state with given outcome
+#
+#> rankhospital("TX", "heart failure", 4)
+#[1] "DETAR HOSPITAL NAVARRO"
+#> rankhospital("MD", "heart attack", "worst")
+#3
+#[1] "HARFORD MEMORIAL HOSPITAL"
+#> rankhospital("MN", "heart attack", 5000)
+#[1] NA
 rankhospital <- function(state, outcome, num = "best") {
   ## Read outcome data
   data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
@@ -90,18 +113,6 @@ rankhospital <- function(state, outcome, num = "best") {
   finalData$Rate <- as.numeric(as.character(finalData$Rate))
   finalData <- finalData[order(finalData$Rate,finalData$Hospital),]
   
-  # remove State column from final Data
-  #keepColumns <- c("Hospital", "Rate")
-  #finalData <- finalData[ , keepColumns, drop = FALSE]
-  
-  
-  
-  
-  #find the hospital name
-  #splitByRate <- lapply(split(finalData,finalData["Rate"]), 
-  #                      function(x) { 
-  #                        hospitals <- x$Hospital
-  #                        hospitals[order(hospitals)][1]})
   ## set num 
   if(num == "best") num = 1
   else if(num == "worst") num = nrow(finalData)
@@ -112,7 +123,9 @@ rankhospital <- function(state, outcome, num = "best") {
 }
 
 
-
+# Ranks hospitals in all states
+# head(rankall("heart attack", 20), 10)
+# For each state, it finds the hospital of the given rank(num)
 rankall <- function(outcome, num = "best") {
   ## Read outcome data
   data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
