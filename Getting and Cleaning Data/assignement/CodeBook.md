@@ -25,7 +25,7 @@ activityrecognition '@' smartlab.ws
 * The experiments have been video-recorded to label the data manually. 
 * The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
-### The input data
+### The input files
 
 The dataset includes the following files:
 
@@ -86,6 +86,20 @@ This script:
 ### Tidy Data
 * Group the data by activity and subject and compute mean and standard deviation
 * Write the tidy data to a file
+
+## The Script Variables:
+* testData ==> data from X_test.txt
+* testData_act ==> data from y_test.txt
+* testData_sub ==> data from subject_test.txt
+* trainData ==> data from X_train.txt
+* trainData_act ==> data from y_train.txt
+* trainData_sub ==> data from subject_train.txt
+* activities ==> data from activity_labels.txt
+* features ==> data from features.txt
+* bigData ==> merged data
+* bigData_mean ==> big data mean
+* bigData_sd ==> big data standard deviation
+* tidy ==> final data (output)
 
 ## The Script Output:
 
