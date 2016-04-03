@@ -2,13 +2,14 @@
 
 This is a the code book that describes the variables, the data, and any transformations or work that I performed to clean up the data.
 
-## The data source
+## The input data
+### Source:
 
 * Source data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 * Source data description: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-## Data Set Information
-### Creators:
+### The Input Data Set Information
+#### Creators:
 Jorge L. Reyes-Ortiz(1,2), Davide Anguita(1), Alessandro Ghio(1), Luca Oneto(1) and Xavier Parra(2)
 * - Smartlab - Non-Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova, Genoa (I-16145), Italy. 
@@ -17,14 +18,14 @@ Universitat Politècnica de Catalunya (BarcelonaTech). Vilanova i la Geltrú (08
 activityrecognition '@' smartlab.ws
 
 
-### Experiment information:
+#### Experiment information:
 * The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
 * Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone 
 (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope,they captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
 * The experiments have been video-recorded to label the data manually. 
 * The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
-## The data
+### The input data
 
 The dataset includes the following files:
 
@@ -85,3 +86,14 @@ This script:
 ### Tidy Data
 * Group the data by activity and subject and compute mean and standard deviation
 * Write the tidy data to a file
+
+## The Script Output:
+
+### Activity Labels (act):
+
+WALKING (value 1): subject was walking during the test
+WALKING_UPSTAIRS (value 2): subject was walking up a staircase during the test
+WALKING_DOWNSTAIRS (value 3): subject was walking down a staircase during the test
+SITTING (value 4): subject was sitting during the test
+STANDING (value 5): subject was standing during the test
+LAYING (value 6): subject was laying down during the test
