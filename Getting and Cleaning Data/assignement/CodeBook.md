@@ -1,3 +1,12 @@
+---
+title: "Assignement Codebook"
+author: "Alina GHERMAN"
+date: "03/04/2016"
+output:
+  html_document:
+    keep_md: yes
+---
+
 # CodeBook
 
 This is a the code book that describes the variables, the data, and any transformations or work that I performed to clean up the data.
