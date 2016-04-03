@@ -113,7 +113,7 @@ bigData <- rbind(finalTestData,finalTrainData)
 bigData_mean <- sapply(bigData,mean,na.rm=TRUE)
 bigData_sd <- sapply(bigData,sd,na.rm=TRUE)
 
-# #################################3. SECOND DATA #############################
+# #################################3. TIDY DATA #############################
 DT <- data.table(bigData)
 tidy<-DT[,lapply(mean,mean),by="act,subj"]
 write.table(tidy, file = "./tidy_data.txt")
