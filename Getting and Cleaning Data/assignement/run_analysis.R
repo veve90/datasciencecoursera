@@ -115,7 +115,7 @@ bigData_sd <- sapply(bigData,sd,na.rm=TRUE)
 
 # #################################3. TIDY DATA #############################
 DT <- data.table(bigData)
-tidy<-DT[,lapply(mean,mean),by="act,subj"]
+tidy<-DT[,lapply(.SD,mean),by="act,subj"]
 write.table(tidy, file = "./tidy_data.txt")
 
 
