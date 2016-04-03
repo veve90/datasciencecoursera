@@ -68,8 +68,7 @@ This script:
 
 ### Get the data
 * Require / Install the needed libraries
-* Download the data from the link
-* Unzip the folder
+* Supose that the data is in the current folder
 
 ### Load the data
 * Load the test and the train data
