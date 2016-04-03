@@ -27,15 +27,15 @@ require("data.table")
 require("reshape2")
 
 # #####################################################################
-# Download data
-filePath <- "./data/mobileData.zip"
-folderName <- "./data"
-fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-if(!file.exists(folderName)){dir.create(folderName)}
-download.file(fileURL,destfile=filePath, method="curl")
+# Download data ==> removed because they asked to work when data is in current folder
+# filePath <- "./data/mobileData.zip"
+# folderName <- "./data"
+# fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+# if(!file.exists(folderName)){dir.create(folderName)}
+# download.file(fileURL,destfile=filePath, method="curl")
 
 # unzip the data
-unzip(filePath)
+# unzip(filePath)
 # The dataset includes the following files:
 #   =========================================
 #   
